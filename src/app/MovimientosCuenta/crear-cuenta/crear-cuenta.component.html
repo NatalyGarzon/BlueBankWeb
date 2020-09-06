@@ -1,0 +1,35 @@
+<p>
+    <mat-toolbar>
+      <span>Movimientos Cuenta</span><nav>
+    <a routerLink="/crear-cuenta" routerLinkActive="active">Crear Cuenta</a>
+    <a routerLink="/consultar-cuenta" routerLinkActive="active">Consultar cuenta</a>
+    <a routerLink="/consignar" routerLinkActive="active">Consignar</a>
+    <a routerLink="/retirar" routerLinkActive="active">Retirar</a>
+  </nav>
+</mat-toolbar>
+</p>
+
+<router-outlet></router-outlet>
+
+<h2>Crear Cuenta</h2>
+<p></p>
+<form [formGroup]="formulario">
+    <table border="2px">
+        <tr>
+            <td>Numero de cuenta:</td> 
+            <td><input type="number" name="NumeroCuenta" size="40" formControlName= "NumeroCuenta"></td>       
+        </tr>
+        <tr> 
+            <td>Valor $:</td>
+            <td><input type="number" name="NuevoSaldo" size="40" formControlName= "NuevoSaldo"></td> 
+        </tr>
+        <tr> 
+            <td>Persona:</td>
+            <td><input type="number" name="IdPersona" size="40" formControlName= "IdPersona"></td> 
+        </tr>
+        <tr align="center" >  
+            <td colspan="2"><input type="submit" (click)="CrearCuenta()" value="CREAR"></td>
+        </tr>  
+    </table>
+       
+</form>
